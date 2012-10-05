@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Couchbase Store</Title>
+			<Shortcut>cbstore</Shortcut>
+			<Description>Couchbase Store operation</Description>
+			<Author>John Zablocki</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>				
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>client</ID>
+					<ToolTip>CouchbaseClient instance variable</ToolTip>
+					<Default>client</Default>
+				</Literal>
+				<Literal>
+					<ID>storemode</ID>
+					<ToolTip>StoreMode for the operation</ToolTip>
+					<Default>Set</Default>
+				</Literal>
+				<Literal>
+					<ID>key</ID>
+					<ToolTip>Key for the item</ToolTip>
+					<Default>key</Default>
+				</Literal>
+				<Literal>
+					<ID>value</ID>
+					<ToolTip>Value for the key</ToolTip>
+					<Default>value</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$client$.Store(StoreMode.$storemode$, $key$, $value$);]]></Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

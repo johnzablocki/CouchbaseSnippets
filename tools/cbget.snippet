@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Couchbase Get</Title>
+			<Shortcut>cbget</Shortcut>
+			<Description>Couchbase Get operation</Description>
+			<Author>John Zablocki</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>				
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>item</ID>
+					<ToolTip>Variable to hold get result</ToolTip>
+					<Default>item</Default>
+				</Literal>
+				<Literal>
+					<ID>client</ID>
+					<ToolTip>CouchbaseClient instance variable</ToolTip>
+					<Default>client</Default>
+				</Literal>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Type of item at key</ToolTip>
+					<Default>type</Default>
+				</Literal>
+				<Literal>
+					<ID>key</ID>
+					<ToolTip>Key for the item</ToolTip>
+					<Default>key</Default>
+				</Literal>				
+			</Declarations>
+			<Code Language="csharp"><![CDATA[var $item$ = $client$.Get<$type$>($key$);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

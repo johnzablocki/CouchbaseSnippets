@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Couchbase Client</Title>
+			<Shortcut>cbc</Shortcut>
+			<Description>Snippet for creating new CouchbaseClient with default config</Description>
+			<Author>John Zablocki</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+            <Declarations>
+				<Literal>
+					<ID>uri</ID>
+					<ToolTip>Bootstrap URI</ToolTip>
+					<Default>http://localhost:8091/pools/</Default>
+				</Literal>				
+			</Declarations>
+			<Code Language="csharp">var config = new CouchbaseClientConfiguration();
+            config.Urls.Add(new Uri("$uri$"));
+            config.Bucket = "default";
+
+            var client = new CouchbaseClient(config);
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
